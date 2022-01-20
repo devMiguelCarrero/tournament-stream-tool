@@ -1,0 +1,35 @@
+.stream-scores-bar {
+  &__main-panel {
+    position: relative;
+    height: 100%;
+    width: 25%;
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url("../../assets/img/results-center.png");
+      background-position: center center;
+      background-size: cover;
+      z-index: 0;
+      opacity: 0.5;
+      border-radius: 0 0 10px 10px;
+    }
+    p {
+      position: relative;
+      z-index: 1;
+      margin: 0;
+      width: 100%;
+      text-align: center;
+      font-size: 1.1vw;
+    }
+  }
+}

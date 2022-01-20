@@ -1,0 +1,17 @@
+{
+  "tournament_name": "SmashDown 3",
+  "tournament_stage": "Grand Finals",
+  "tournament_format": "single",
+	"players": {
+		"player_1": {
+			"name": "Mokun",
+			"tag": "PRX",
+			"score": 1
+		},
+		"player_2": {
+			"name": "Mike",
+			"tag": "THS",
+			"score": 1
+		}
+	}
+}

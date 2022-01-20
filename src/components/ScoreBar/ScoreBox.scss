@@ -1,0 +1,29 @@
+.stream-scores-box {
+  position: relative;
+  height: 100%;
+  width: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: bold;
+  font-size: 2vw;
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../../assets/img/score-box.png");
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 0;
+    border-radius: 10px;
+  }
+  &__result {
+    position: relative;
+    z-index: 2;
+  }
+}

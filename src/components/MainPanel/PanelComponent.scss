@@ -1,0 +1,38 @@
+.stream-scores-bar {
+  &__main-panel {
+    &__component {
+      position: relative;
+      z-index: 4;
+      flex: 0 0 50%;
+      flex-grow: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 72%;
+
+      &--brand {
+        .brand-image {
+          margin-left: 10%;
+        }
+      }
+
+      &--publicity {
+        .brand-image {
+          margin-right: 10%;
+        }
+      }
+
+      &--info {
+        align-items: flex-start;
+
+        p {
+          color: #fff;
+          font-size: 1vw;
+          text-transform: uppercase;
+          font-weight: bold;
+          text-align: center;
+        }
+      }
+    }
+  }
+}

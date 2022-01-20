@@ -1,0 +1,27 @@
+.stream-scores-bar {
+  &__player {
+    position: relative;
+    z-index: 5;
+    height: 80%;
+    width: 40%;
+    display: flex;
+
+    &.player-1 {
+      align-items: stretch;
+      justify-content: flex-end;
+      transform: translateX(5%);
+      .stream-name-box {
+        justify-content: flex-end;
+        &:before {
+          background-image: url("../../assets/img/player-background-left.png");
+          background-position: right center;
+        }
+      }
+    }
+    &.player-2 {
+      flex-direction: row-reverse;
+      transform: translateX(-5%);
+      justify-content: flex-end;
+    }
+  }
+}
