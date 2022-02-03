@@ -3,6 +3,7 @@ const MiniCSSExtractPlugin = require("mini-css-extract-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 const path = require("path");
 
@@ -25,6 +26,11 @@ module.exports = (env, argv) => {
       minimize: !isDevelopment(),
     },
     plugins: [
+      new HtmlWebpackPlugin({
+        template: "./src/index.html",
+        filename: "index.html",
+        inject: "body"
+      }),
       new CleanWebpackPlugin(),
       new MiniCSSExtractPlugin({
         filename: "bundle.css",
