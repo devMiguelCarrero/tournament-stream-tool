@@ -1,16 +1,31 @@
 import "./normalize.scss";
-import React from "react";
+import React, { useState, useEffect } from "react";
+import Axios from "axios";
 import MainArea from "./components/UI/MainArea";
-import meta_data from "./data.json";
 import SectionBar from "./components/SectionBar/SectionBar";
-
 const App = () => {
-  console.log(meta_data);
+  const [StreamData, setStreamData] = useState(null);
+
+  Axios.defaults.headers = {
+    "Cache-Control": "no-cache",
+    Pragma: "no-cache",
+    Expires: "0",
+  };
+
+  useEffect(() => {
+    const dataInterval = setInterval(async () => {
+      const response = await Axios.get("./data/data.json");
+      setStreamData(response.data);
+    }, 2000);
+    return () => clearInterval(dataInterval);
+  }, [StreamData, setStreamData]);
 
   return (
-    <MainArea>
-      <SectionBar></SectionBar>
-    </MainArea>
+    StreamData && (
+      <MainArea>
+        <SectionBar StreamData={StreamData}></SectionBar>
+      </MainArea>
+    )
   );
 };
 export default App;

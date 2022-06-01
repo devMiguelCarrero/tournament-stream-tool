@@ -4,6 +4,7 @@
       position: relative;
       z-index: 4;
       flex: 0 0 50%;
+      max-width: 50%;
       flex-grow: 1;
       display: flex;
       align-items: center;
@@ -20,10 +21,15 @@
         .brand-image {
           margin-right: 10%;
         }
+
+        .sponsor-carousel {
+          margin-right: 25%;
+        }
       }
 
       &--info {
         align-items: flex-start;
+        max-width: 100%;
 
         p {
           color: #fff;

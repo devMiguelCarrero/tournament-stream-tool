@@ -7,6 +7,7 @@ import PanelComponent from "./PanelComponent";
 import meta_data from "../../data.json";
 import TournamentStage from "./TournamentStage";
 import Shinji from "../../assets/img/shinji.jpg";
+import SponsorCarousel from "../SponsorCarousel/SponsorCarousel";
 
 const MainPanel = (props) => {
   return (
@@ -16,11 +17,11 @@ const MainPanel = (props) => {
         <BrandImage className="brand-image" src={Logo} />
       </PanelComponent>
       <PanelComponent className="stream-scores-bar__main-panel__component--publicity">
-        <BrandImage className="brand-image" src={AsusLogo} />
+        <SponsorCarousel transitionTime={5000} />
       </PanelComponent>
       <PanelComponent className="stream-scores-bar__main-panel__component--info">
         <TournamentStage>
-          <p>{meta_data.tournament_stage}</p>
+          <p>{props.stage}</p>
         </TournamentStage>
       </PanelComponent>
     </div>
